@@ -5,14 +5,25 @@ on:
   pull_request:
   workflow_dispatch:
 
-jobs:
-  build-linux:
-    name: Build on ubuntu
-    runs-on: ubuntu-latest
+# jobs:
+#   build-linux:
+#     name: Build on ubuntu
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+
+#       - name: Run Linux Commands
+#         run: echo "Running on ubuntu runner"
+
+jobs: 
+  build-windows:
+    name: Build windows
+    runs-on: windows-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Run Linux Commands
-        run: echo "Running on ubuntu runner"
+       - name: Checkout Repository
+         uses: actions/checkout@v4
+       - name: Run
+         uses: systeminfo
