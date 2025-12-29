@@ -26,4 +26,4 @@ jobs:
        - name: Checkout Repository
          uses: actions/checkout@v4
        - name: Run
-         uses: systeminfo
+         run: systeminfo
